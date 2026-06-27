@@ -1,0 +1,13 @@
+{
+  "name": "vacancy-watcher",
+  "version": "1.0.0",
+  "description": "Мониторинг вакансий фронтенд-разработчика с уведомлениями в Telegram",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js",
+    "inspect": "node tools/inspect.js"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}
