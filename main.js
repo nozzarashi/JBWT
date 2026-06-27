@@ -11,6 +11,7 @@ async function run() {
   const state = await loadState();
   const browser = await launchBrowser();
   const groups = [];
+  const errors = [];
   let totalNew = 0;
 
   for (const parser of parsers) {
@@ -38,6 +39,7 @@ async function run() {
       markSeen(state, parser.name, frontend);
     } catch (err) {
       console.error(`ошибка в парсере ${parser.name}: ${err.message}`);
+      errors.push({ displayName: parser.displayName, message: err.message });
     } finally {
       await context.close();
     }
@@ -45,14 +47,16 @@ async function run() {
 
   await browser.close();
 
-  if (groups.length && !DRY_RUN) {
-    await notifyBatch(groups);
+  if ((groups.length || errors.length) && !DRY_RUN) {
+    await notifyBatch(groups, errors);
   }
   if (!DRY_RUN) {
     await saveState(state);
   }
 
-  console.log(`\nновых вакансий: ${totalNew}${DRY_RUN ? ' (dry run)' : ''}`);
+  console.log(
+    `\nновых вакансий: ${totalNew}, ошибок: ${errors.length}${DRY_RUN ? ' (dry run)' : ''}`
+  );
 }
 
 run().catch((err) => {
