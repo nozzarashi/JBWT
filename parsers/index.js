@@ -14,6 +14,8 @@ import * as innostage from './innostage.js';
 import * as uplab from './uplab.js';
 import * as x5 from './x5.js';
 import * as rt from './rt.js';
+import * as croc from './croc.js';
+import * as megafon from './megafon.js';
 
 export const parsers = [
   magnit,
@@ -32,4 +34,6 @@ export const parsers = [
   uplab,
   x5,
   rt,
+  croc,
+  megafon,
 ];

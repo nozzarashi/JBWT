@@ -23,12 +23,17 @@
 | Uplab | career.uplab.ru | DOM (Tilda, заголовок из slug) |
 | X5 Tech | x5.tech/vacancy | **API** (пагинация) |
 | Ростелеком | job.rt.ru | **API** (все 500+ одним запросом) |
+| КРОК | careers.croc.ru/vacancies | DOM (категория «Разработка» по тексту заголовка + кнопка «Показать еще») |
+| МегаФон | job.megafon.ru | DOM (фильтр Frontend `specialties=25` + пагинация `?page=`) |
 
 ### Отложены (вернуться)
 - **ДНС Технологии** — dns-tech.ru/vacancies: на момент разработки сайт лежал («Ошибка сервера»).
   Запасной источник: career.habr.com/companies/dns-tech.
 - **Skyeng** — vacancies.skyeng.ru: на сайте только продажи/маркетинг, разработки нет
-  (тех-найм идёт через Huntflow). Парсер дал бы вечный 0.
+  (тех-найм идёт через Huntflow). Парсер дал бы вечный 0. Есть второй домен
+  `job.skyeng.ru/vacancies` — стоит перепроверить, возможно там уже есть и разработка.
+- **Ozon Tech** — ozon.tech/vacancies: антибот (Cloudflare-подобный WAF), отдаёт 403
+  с фейковой страницей «Похоже, нет соединения». Без stealth-плагина не пускает.
 
 ## Для ручного отклика (крупные/средние IT РФ)
 
@@ -62,6 +67,22 @@
 | Райффайзен Тех | raiffeisen.tech |
 | VK (общий) | team.vk.company (другие теги, не только 2609) |
 | Авито, Ozon, Циан — | также активно постят на hh.ru / career.habr.com |
+| КРОК | careers.croc.ru/vacancies — мониторится ботом, доп. категории смотри руками |
+| Softline | softline.ru/job |
+| ЛАНИТ | career.habr.com/companies/lanit/vacancies (своей страницы нет) |
+| Диасофт | career.habr.com/companies/diasoft/vacancies |
+| GlowByte | job.glowbyteconsulting.com |
+| ВТБ | rabota.vtb.ru |
+| Иннотех (дочка ВТБ) | inno.tech, career.habr.com/companies/innotech |
+| МТС Банк | job.mtsbank.ru/it |
+| Россельхозбанк (РСХБ.Цифра) | rshbdigital.ru/vacancies |
+| Северсталь (IT/Digital) | career.severstal.com/directions/it |
+| СИБУР Диджитал | career.sibur.ru/enterprises/sibur-didzhital |
+| НЛМК | career.nlmk.com/vacancy/it-digital |
+| SberDevices / общий IT-найм Сбера | developers.sber.ru/kak-v-sbere/vacancies |
+| Купер (точный IT-раздел) | team.sbermarket.ru/tech |
+| М.Видео-Эльдорадо | career.mvideoeldorado.ru/vacancies |
+| Playrix (геймдев) | playrix.com/job |
 
 > Глобально: **hh.ru** и **career.habr.com** агрегируют большинство фронт-вакансий этих
 > компаний — если у компании нет своей страницы, ищи её вакансии там по названию.
